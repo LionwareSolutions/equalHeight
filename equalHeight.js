@@ -21,14 +21,16 @@
             });
 
             var scalableElements = container.find(fillElementSelector);
-            scalableElements.each(function(){
-                var actualElementHeight = scalableElements.height();
-                var heightToAdd = highest - actualElementHeight;
-
-                var newHeight = actualElementHeight + heightToAdd;
-
-                scalableElements.height(newHeight);
-            });
+            scalableElements.height(highest);
+//            I don't remember why I did it this way, so disable it for now.
+//            scalableElements.each(function(){
+//                var actualElementHeight = scalableElements.height();
+//                var heightToAdd = highest - actualElementHeight;
+//
+//                var newHeight = actualElementHeight + heightToAdd;
+//
+//                scalableElements.height(newHeight);
+//            });
         });
     };
 })(jQuery);
